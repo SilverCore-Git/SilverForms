@@ -1,0 +1,29 @@
+{
+  "name": "silverforms",
+  "version": "0.0.1",
+  "description": "Ce projet est un template de backend pour vos site web a implanter facilement !!",
+  "main": "server.js",
+  "scripts": {
+    "start": "sudo node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilverCore-Git/SilverForms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilverCore-Git/SilverForms/issues"
+  },
+  "homepage": "https://github.com/SilverCore-Git/SilverForms#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
