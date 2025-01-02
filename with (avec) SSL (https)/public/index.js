@@ -31,6 +31,7 @@ const btnzone1 = document.getElementById('btnzone1');
 
 zone1Label.innerHTML = cfg.zone1Label;
 inputzone1.placeholder = cfg.inputzone1;
+inputzone1.required = cfg.requireZone1;
 btnzone1.innerHTML = cfg.btnzone1;
 
 if (!cfg.zone1) {
@@ -51,6 +52,7 @@ const btnzone2 = document.getElementById('btnzone2');
 
 zone2Label.innerHTML = cfg.zone2Label;
 inputzone2.placeholder = cfg.inputzone2;
+inputzone2.required = cfg.requireZone2;
 btnzone2.innerHTML = cfg.btnzone2;
 
 if (!cfg.zone2) {
@@ -71,6 +73,7 @@ const btnzone3 = document.getElementById('btnzone3');
 
 zone3Label.innerHTML = cfg.zone3Label;
 inputzone3.placeholder = cfg.inputzone3;
+inputzone3.required = cfg.requireZone3;
 btnzone3.innerHTML = cfg.btnzone3;
 
 if (!cfg.zone3) {
@@ -91,6 +94,7 @@ const btnzone4 = document.getElementById('btnzone4');
 
 zone4Label.innerHTML = cfg.zone4Label;
 inputzone4.placeholder = cfg.inputzone4;
+inputzone4.required = cfg.requireZone4;
 btnzone4.innerHTML = cfg.btnzone4;
 
 if (!cfg.zone4) {
@@ -111,6 +115,7 @@ const btnzone5 = document.getElementById('btnzone5');
 
 zone5Label.innerHTML = cfg.zone5Label;
 inputzone5.placeholder = cfg.inputzone5;
+inputzone5.required = cfg.requireZone5;
 btnzone5.innerHTML = cfg.btnzone5;
 
 if (!cfg.zone5) {

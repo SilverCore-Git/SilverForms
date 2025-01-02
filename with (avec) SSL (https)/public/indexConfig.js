@@ -22,6 +22,7 @@
 
     // ――――――――――――――――――――――――――――― { ZONE 1 } ―――――――――――――――――――――――――――――
         const zone1 = true    // allowed or not zone ? (alloweb = true | dont allowed = false) 
+        const requireZone1 = false    // To return or not the required zone.
 
             const label1 = true    // allowed or not zone label ?
                 const zone1Label = 'SilverForms | zone1Label';    // label name (inerHTML)
@@ -34,6 +35,7 @@
 
     // ――――――――――――――――――――――――――――― { ZONE 2 } ―――――――――――――――――――――――――――――
         const zone2 = true    // allowed or not zone ? (alloweb = true | dont allowed = false) 
+        const requireZone2 = false    // To return or not the required zone.
 
             const label2 = true    // allowed or not zone label ?
                 const zone2Label = 'SilverForms | zone2Label';    // label name (inerHTML)
@@ -46,6 +48,7 @@
 
     // ――――――――――――――――――――――――――――― { ZONE 3 } ―――――――――――――――――――――――――――――
         const zone3 = true    // allowed or not zone ? (alloweb = true | dont allowed = false) 
+        const requireZone3 = true    // To return or not the required zone.
 
             const label3 = true    // allowed or not zone label ?
                 const zone3Label = 'SilverForms | zone3Label';    // label name (inerHTML)
@@ -58,6 +61,7 @@
 
     // ――――――――――――――――――――――――――――― { ZONE 4 } ―――――――――――――――――――――――――――――
         const zone4 = true    // allowed or not zone ? (alloweb = true | dont allowed = false) 
+        const requireZone4 = false    // To return or not the required zone.
 
             const label4 = true    // allowed or not zone label ?
                 const zone4Label = 'SilverForms | zone4Label';    // label name (inerHTML)
@@ -70,6 +74,7 @@
 
     // ――――――――――――――――――――――――――――― { ZONE 5 } ―――――――――――――――――――――――――――――
         const zone5 = true    // allowed or not zone ? (alloweb = true | dont allowed = false) 
+        const requireZone5 = false    // To return or not the required zone.
 
             const label5 = true    // allowed or not zone label ?
                 const zone5Label = 'SilverForms | zone5Label';    // label name (inerHTML)
@@ -107,6 +112,7 @@ export default {
 
     // ZONE CONFIG
     zone1,
+    requireZone1,
         label1,
             zone1Label,
         text1,
@@ -115,6 +121,7 @@ export default {
             btnzone1,
 
     zone2,
+    requireZone2,
         label2,
             zone2Label,
         text2,
@@ -123,6 +130,7 @@ export default {
             btnzone2,
 
     zone3,
+    requireZone3,
         label3,
             zone3Label,
         text3,
@@ -131,6 +139,7 @@ export default {
             btnzone3,
 
     zone4,
+    requireZone4,
         label4,
             zone4Label,
         text4,
@@ -139,6 +148,7 @@ export default {
             btnzone4,
 
     zone5,
+    requireZone5,
         label5,
             zone5Label,
         text5,
