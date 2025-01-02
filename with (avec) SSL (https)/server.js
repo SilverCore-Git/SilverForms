@@ -49,7 +49,7 @@ const options = {
     key: fs.readFileSync(`/etc/letsencrypt/live/${hostname}/privkey.pem`, 'utf8'),
     cert: fs.readFileSync(`/etc/letsencrypt/live/${hostname}/fullchain.pem`, 'utf8'),
 };
-if (!cfg.showsslkey) { // it's dangerous !!
+if (cfg.showsslkey) { // it's dangerous !!
     console.log(prefix, 'loading ssl with key : ');
     console.log(options)
 }
@@ -72,7 +72,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // recket link (the fontend send data to this url)
 console.log(prefix, 'Configuration of recket...');
 console.log(prefix, 'Recket link is :', `https://${hostname}:${port}/send-SilverForms/${cfg.recketName}`)
-app.post(`/send-SilverForms/${recketName}`, (req, res) => {
+app.post(`/send-SilverForms/${cfg.recketName}`, (req, res) => {
     const { title, content, author, publish_date } = req.body;
 
 
