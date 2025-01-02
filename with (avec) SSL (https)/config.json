@@ -1,15 +1,13 @@
-[
-    {
-        "loggerPrefix": "[SilverForms]> ",
-        "srvPort": "3333",
-        "srvHostname": "hostname.com",
-        "recketName": "send"
-    },
-    {
-        "cilentHostname": "hostname.com",
-        "cilentHostname2": "clientHostname2.com",
-        "cilentHostname3": "clientHostname3.com",
-        "cilentHostname4": "clientHostname4.com",
-        "cilentHostname5": "clientHostname5.com"
-    }
-]
+{
+    "loggerPrefix": "[SilverForms]> ",
+    "srvPort": "3333",
+    "srvHostname": "hostname.com",
+    "recketName": "send",
+    "showsslkey": false,
+
+    "cilentHostname": "hostname.com",
+    "cilentHostname2": "",
+    "cilentHostname3": "",
+    "cilentHostname4": "",
+    "cilentHostname5": ""
+}

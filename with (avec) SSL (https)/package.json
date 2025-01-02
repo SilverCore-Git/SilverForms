@@ -4,7 +4,8 @@
   "description": "Ce projet est un template de backend pour vos site web a implanter facilement !!",
   "main": "server.js",
   "scripts": {
-    "start": "sudo node server.js"
+    "start": "node server.js",
+    "start-sudo": "sudo npm start"
   },
   "repository": {
     "type": "git",

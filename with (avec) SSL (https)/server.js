@@ -17,19 +17,17 @@ const cors = require('cors');
 
 // require data
 const top = require('./top.js'); top();
-const { loggerPrefix, srvPort, srvHostname, recketName } = require('./config.json');
-const { cilentHostname, cilentHostname2, cilentHostname3, cilentHostname4, cilentHostname5 } = require('./config.json');
-import index from './public/index.html';
+const cfg = require('./config.json');
 
 // creating var
-const prefix = loggerPrefix;
-const hostname = srvHostname;
-const port = srvPort;
-const client1host = cilentHostname;
-const client2host = cilentHostname2;
-const client3host = cilentHostname3;
-const client4host = cilentHostname4;
-const client5host = cilentHostname5;
+const prefix = cfg.loggerPrefix;
+const hostname = cfg.srvHostname;
+const port = cfg.srvPort;
+const client1host = cfg.cilentHostname;
+const client2host = cfg.cilentHostname2;
+const client3host = cfg.cilentHostname3;
+const client4host = cfg.cilentHostname4;
+const client5host = cfg.cilentHostname5;
 const allClientHost = [
     client1host, 
     client2host,
@@ -41,39 +39,39 @@ const allClientHost = [
 
 // starting loading app
 console.log('―――――――――――――――――― { Silver Forms } ――――――――――――――――――')
-console.log(prefix + 'starting loading app...')
+console.log(prefix, 'starting loading app...')
 const app = express();
 
 
 // loading SSL (with letsencrypt)
-console.log(prefix + 'configur sll option...')
+console.log(prefix, 'configur sll option...')
 const options = {
     key: fs.readFileSync(`/etc/letsencrypt/live/${hostname}/privkey.pem`, 'utf8'),
     cert: fs.readFileSync(`/etc/letsencrypt/live/${hostname}/fullchain.pem`, 'utf8'),
 };
-console.log(prefix + 'loading ssl in : ');
-console.log(options)
+if (!cfg.showsslkey) { // it's dangerous !!
+    console.log(prefix, 'loading ssl with key : ');
+    console.log(options)
+}
 
 // Configur CORS for allowed all client host and srvhostname (in config.json)
-console.log(prefix + 'configur origin of corse...')
+console.log(prefix, 'configur origin of corse...')
 app.use(cors({
     origin: allClientHost,
 }));
-console.log(prefix + 'Corse is configur for allowed client domaine :');
+console.log(prefix, 'Corse is configur for allowed client domaine :');
 console.log(allClientHost);
 
 // Middleware pour analyser les corps de requêtes en JSON
 app.use(bodyParser.json());
 
-// afficher la page index.ejs (equivalent html avec variables) sur https://hostname:port/
-console.log(prefix + 'Configuration of main page : ', index);
-app.get('/', (req, res) => {
-    res.send(index);
-});
+// afficher la page index.html dans public/ (equivalent html avec variables) sur https://hostname:port/
+console.log(prefix, 'Configuration of main page in public/ ');
+app.use(express.static(path.join(__dirname, 'public')));
 
 // recket link (the fontend send data to this url)
-console.log(prefix + 'Configuration of recket...');
-console.log(prefix + 'Recket link is :', `https://${hostname}:${port}/send-SilverForms/${recketName}`)
+console.log(prefix, 'Configuration of recket...');
+console.log(prefix, 'Recket link is :', `https://${hostname}:${port}/send-SilverForms/${cfg.recketName}`)
 app.post(`/send-SilverForms/${recketName}`, (req, res) => {
     const { title, content, author, publish_date } = req.body;
 
@@ -112,8 +110,8 @@ app.post(`/send-SilverForms/${recketName}`, (req, res) => {
 });
 
 // Démarrer le serveur HTTPS
-console.log(prefix + 'Loading is end !!');
-console.log(prefix + `Starting app now to url : https://${hostname}:${port}/`);
+console.log(prefix, 'Loading is end !!');
+console.log(prefix, `Starting app now to url : https://${hostname}:${port}/`);
 https.createServer(options, app).listen(port, () => {
     console.log(`HTTPS server listen on https://${hostname}:${port}`);
 });
