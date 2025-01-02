@@ -1,0 +1,168 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="index.js"></script>
+        <title>title</title>
+    </head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Conteneur du formulaire */
+        .form-container {
+            background-color: #1e1e1e;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .form-container form {
+            margin-right: 20px;
+        }
+
+        /* Titre du formulaire */
+        h1 {
+            font-size: 24px;
+            color: #6a5acd;
+            margin-bottom: 20px;
+        }
+
+        /* Style des groupes de champs */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            font-size: 14px;
+            color: #b0b0b0;
+            margin-bottom: 5px;
+        }
+
+        /* Champs de texte */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #fff;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #6a5acd;
+        }
+        .btns {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+            top: 0%;
+            left: 0%;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a4fa0;
+        }
+
+        .s {
+            width: 50%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        input:focus, button:focus, textarea:focus {
+            box-shadow: 0 0 5px rgba(106, 92, 205, 0.6);
+        }
+    </style>
+    <body>
+        <div class="form-container">
+
+            <h1 id="bodytitle">bodytitle</h1>
+
+            <form action="#">
+
+
+                <div class="input-group" id="zone1">
+                    <label for="zone1" id="zone1Label">zone1</label>
+                    <input type="text" id="inputzone1" name="zone1" placeholder="zone1" required>
+                    <button class="s" id="btnzone1">btnzone1</button>
+                </div>
+
+                <div class="input-group" id="zone2">
+                    <label for="zone2" id="zone2Label">zone2</label>
+                    <input type="text" id="zone2" name="zone2" placeholder="zone2" required>
+                    <button class="s" id="btnzone2">btnzone2</button>
+                </div>
+
+                <div class="input-group" id="zone3">
+                    <label for="zone3" id="zone3Label">zone3</label>
+                    <textarea type="text" id="zone3" name="zone3" placeholder="zone3" required></textarea>
+                    <button class="s" id="btnzone3">btnzone3</button>
+                </div>
+
+                <div class="input-group" id="zone4">
+                    <label for="zone4" id="zone4Label">zone4</label>
+                    <input type="zone4" id="zone4" name="zone4" placeholder="zone4" required>
+                    <button class="s" id="btnzone4">btnzone4</button>
+                </div>
+
+                <div class="input-group" id="zone5">
+                    <label for="zone5" id="zone5Label">zone5</label>
+                    <input type="zone5" id="zone5" name="zone5" placeholder="zone5" required>
+                    <button class="s" id="btnzone5">btnzone5</button>
+                </div>
+
+                <div class="btns">
+                    <button id="btn1">btn1</button>
+                    <button id="btn2">btn2</button>
+                    <button id="btn3">btn3</button>
+                </div>
+
+
+            </form>
+        </div>
+    </body>
+    </html>

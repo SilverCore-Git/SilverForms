@@ -10,7 +10,7 @@ const cors = require('cors');
 const top = require('./top.js'); top();
 const { loggerPrefix, srvPort, srvHostname, recketName } = require('./config.json');
 const { cilentHostname, cilentHostname2, cilentHostname3, cilentHostname4, cilentHostname5 } = require('./config.json');
-import index from './public/index.ejs';
+import index from './public/index.html';
 
 // creating var
 const prefix = loggerPrefix;
