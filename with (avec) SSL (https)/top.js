@@ -1,3 +1,12 @@
+/**
+ * 
+ * @license CC-LC 1.0
+ * @author SivlerCore
+ * @author SilverForms 
+ * @author MisterPapaye
+ * 
+**/
+
 export function top() {
     const tag0 = `―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――`;
     const tag = `

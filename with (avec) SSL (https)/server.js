@@ -1,3 +1,12 @@
+/**
+ * 
+ * @license CC-LC 1.0
+ * @author SivlerCore
+ * @author SilverForms 
+ * @author MisterPapaye
+ * 
+**/
+
 // libs
 const express = require('express');
 const https = require('https');

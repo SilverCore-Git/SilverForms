@@ -1,3 +1,12 @@
+/**
+ * 
+ * @license CC-LC 1.0
+ * @author SivlerCore
+ * @author SilverForms 
+ * @author MisterPapaye
+ * 
+**/
+
 import config from './indexConfig.js';
 
 const title = document.getElementsByTagName('title')[0];
