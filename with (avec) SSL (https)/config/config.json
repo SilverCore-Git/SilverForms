@@ -3,6 +3,7 @@
     "srvPort": "3333",
     "srvHostname": "hostname.com",
     "recketName": "send",
+    "databasePath": "./database/base.json",
     "showsslkey": false,
 
     "cilentHostname": "hostname.com",

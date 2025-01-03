@@ -72,39 +72,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 // recket link (the fontend send data to this url)
 console.log(prefix, 'Configuration of recket...');
 console.log(prefix, 'Recket link is :', `https://${hostname}:${port}/send-SilverForms/${cfg.recketName}`)
+
 app.post(`/send-SilverForms/${cfg.recketName}`, (req, res) => {
-    const { title, content, author, publish_date } = req.body;
 
+    const { zone1, zone2, zone3, zone4, zone5 } = req.body;
 
-    // Vérifier si tous les champs sont fournis
-    if (!title || !content || !author || !publish_date) {
-        return res.status(400).json({ message: 'Tous les champs sont requis.' });
-    }
+    const databasePath = path.join(__dirname, cfg.databasePath);
 
-    const filePath = path.join(__dirname, '../../../dium/launcher/news.json');
-
-    // Lire le fichier JSON existant
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
-            return res.status(500).json({ message: 'Erreur de lecture du fichier.' });
+            console.log(prefix, 'Error on reading .json :', data);
         }
 
         let jsonData = [];
         try {
             jsonData = JSON.parse(data);
         } catch (error) {
-            return res.status(500).json({ message: 'Erreur de parsing du fichier JSON.' });
-        }
+            console.log(prefix, 'Error parsing json.');
+        };
 
-        // Ajouter la nouvelle entrée
-        jsonData.push({ title, content, author, publish_date });
+        jsonData.push({ zone1, zone2, zone3, zone4, zone5 });
 
-        // Réécrire dans le fichier JSON
         fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), (err) => {
             if (err) {
-                return res.status(500).json({ message: 'Erreur lors de l\'écriture dans le fichier.' });
+                console.log(prefix, 'Error on writing JSON.')
             }
-            res.status(200).json({ message: 'Article ajouté avec succès !' });
+            console.log(prefix, 'Data adding with succes !')
         });
     });
 });

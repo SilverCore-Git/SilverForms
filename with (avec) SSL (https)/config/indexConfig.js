@@ -13,6 +13,9 @@
     const page = true   // allowed or not the page
     const title = 'SilverForms | page title';   // title of the page
     const bodytitle = 'SilverForms | Form';    // title of the form (inerHTML)
+    const confirmBlock = true    // allowed or not the send confirm block
+        const confirmBlock_OK = 'Formulaire envoyer !'    // Confirm block if is ok (inerHTML)
+        const confirmBlock_NONE = `Erreur lors de l'envoi du formulaire.`    // Confirm block if is not ok (inerHTML)
 
 // ――――――――――――――――――――――――――――――――――――――― { MAIN CONFIG } ―――――――――――――――――――――――――――――――――――――――
 
@@ -109,6 +112,9 @@ export default {
     page,
     title,
     bodytitle,
+    confirmBlock,
+        confirmBlock_OK,
+        confirmBlock_NONE,
 
     // ZONE CONFIG
     zone1,
