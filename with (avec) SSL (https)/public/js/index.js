@@ -16,7 +16,6 @@ const title = document.getElementsByTagName('title')[0];
 const bodytitle = document.getElementById('bodytitle');
 const confirmBlock = document.getElementById('confirmBlock');
 
-confirmBlock.style.display = 'none';
 title.innerHTML = cfg.title;
 bodytitle.innerHTML = cfg.bodytitle;
 

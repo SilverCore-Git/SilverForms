@@ -23,17 +23,20 @@ const cfg = require('./public/config/config.js');
 const prefix = cfg.loggerPrefix;
 const hostname = cfg.srvHostname;
 const port = cfg.srvPort;
-const client1host = cfg.cilentHostname;
-const client2host = cfg.cilentHostname2;
-const client3host = cfg.cilentHostname3;
-const client4host = cfg.cilentHostname4;
-const client5host = cfg.cilentHostname5;
+const htt = 'https://'
+const client1host = htt + cfg.cilentHostname;
+const client2host = htt + cfg.cilentHostname2;
+const client3host = htt + cfg.cilentHostname3;
+const client4host = htt + cfg.cilentHostname4;
+const client5host = htt + cfg.cilentHostname5;
+const fullhostname = htt + hostname + ':' + port;
 const allClientHost = [
     client1host, 
     client2host,
     client3host,
     client4host,
     client5host,
+    fullhostname,
     hostname
 ];
 
@@ -78,7 +81,7 @@ app.post(`/send-SilverForms/${cfg.recketName}`, (req, res) => {
 
     const databasePath = path.join(__dirname, cfg.databasePath);
 
-    fs.readFile(filePath, 'utf8', (err, data) => {
+    fs.readFile(databasePath, 'utf8', (err, data) => {
         if (err) {
             console.log(prefix, 'Error on reading .json :', data);
         }
@@ -92,7 +95,7 @@ app.post(`/send-SilverForms/${cfg.recketName}`, (req, res) => {
 
         jsonData.push({ zone1, zone2, zone3, zone4, zone5 });
 
-        fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), (err) => {
+        fs.writeFile(databasePath, JSON.stringify(jsonData, null, 2), (err) => {
             if (err) {
                 console.log(prefix, 'Error on writing JSON.')
             }
