@@ -1,5 +1,4 @@
 # Silver Forms
-# actuelement en dev **backend non fonctionel !!**
 Bienvenue sur le repo de SivlerForms un service qui va faciliter vos formulaire !!
 ---
         ███████╗██╗██╗     ██╗   ██╗███████╗██████╗     ███████╗ ██████╗ ██████╗ ███╗   ███╗███████╗
@@ -18,16 +17,15 @@ Le but de SilverForms est de faciliter l'integration de formulaire et leur backe
 ## Requiert 
 - node.js     (verssion 12 ou plus)
 - npm         (verssion 7 ou plus)
+- certificat ssl (**letsencrypt**)
 - server web **linux**<br>
 *(actuelement tester sur debian)*
 
 ## Utilisation 
-**le backend n'est actuelement pas fini !!**
-** son utilisation n'est pas possible **
 - Installer la version voulu dans vôtre server
 - installer les dependencies : ``npm install`` | ``npm i``
-- Configurer vôtre formulaire dans ``public/indexConfig.js``
-- Configurer vôtre serveur dans ``config.json``
+- Configurer vôtre formulaire dans ``public/config/indexConfig.js``
+- Configurer vôtre serveur dans ``public/config/config.json``
 - Lancer vôtre serveur avec ``sudo node server.js``
 
 ---
