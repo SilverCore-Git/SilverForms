@@ -16,8 +16,8 @@ const path = require('path');
 const cors = require('cors');
 
 // require data
-const top = require('./top.js'); top();
-const cfg = require('./config.json');
+const top = require('./assets/top.js'); top();
+const cfg = require('./config/config.json');
 
 // creating var
 const prefix = cfg.loggerPrefix;

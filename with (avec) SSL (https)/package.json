@@ -1,6 +1,6 @@
 {
   "name": "silverforms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ce projet est un template de backend pour vos site web a implanter facilement !!",
   "main": "server.js",
   "scripts": {
