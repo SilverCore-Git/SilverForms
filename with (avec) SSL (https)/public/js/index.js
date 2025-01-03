@@ -7,7 +7,7 @@
  * 
 **/
 
-import config from '../../config/indexConfig.js';
+import config from '../config/indexConfig.js';
 const cfg = config;
 
 // MAIN VAR

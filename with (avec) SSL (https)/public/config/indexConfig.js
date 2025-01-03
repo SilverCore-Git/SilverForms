@@ -10,6 +10,10 @@
 
 // ――――――――――――――――――――――――――――――――――――――― { MAIN CONFIG } ―――――――――――――――――――――――――――――――――――――――
 
+    const srvPort = "3333";
+    const srvHostname = "hostname.com";
+    const recketName = "send";
+
     const page = true   // allowed or not the page
     const title = 'SilverForms | page title';   // title of the page
     const bodytitle = 'SilverForms | Form';    // title of the form (inerHTML)
@@ -109,6 +113,10 @@
 export default {
 
     // MAIN CONFIG
+    srvPort,
+    srvHostname,
+    recketName,
+
     page,
     title,
     bodytitle,

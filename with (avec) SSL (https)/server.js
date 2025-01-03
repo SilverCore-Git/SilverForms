@@ -17,7 +17,7 @@ const cors = require('cors');
 
 // require data
 const top = require('./assets/top.js'); top();
-const cfg = require('./config/config.json');
+const cfg = require('./public/config/config.js');
 
 // creating var
 const prefix = cfg.loggerPrefix;
@@ -41,7 +41,6 @@ const allClientHost = [
 console.log('―――――――――――――――――― { Silver Forms } ――――――――――――――――――')
 console.log(prefix, 'starting loading app...')
 const app = express();
-
 
 // loading SSL (with letsencrypt)
 console.log(prefix, 'configur sll option...')
