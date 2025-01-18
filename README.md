@@ -29,7 +29,7 @@ Le but de SilverForms est de faciliter l'integration de formulaire et leur backe
 - Lancer vôtre serveur avec ``sudo node server.js``
 
 ---
-Merci de soutenir les projets [SilverCore](https://core.silverdium.fr) !<br>
-[Vous pouvez nous aider](https://tipeee.com/silverdium) !<br>
-
-Copyright (c) 2024 SilverCore | Tous droits réservés.<br>
+by [SilverCore](https://github.com/SilverCore-Git) 👑 [Vous pouvez nous aider](https://tipeee.com/silverdium) 😎💸<br>
+Merci de soutenir les projets SilverCore ❤️ !<br>
+🔐 Vous n'êtes pas autorisé à vendre ce code sans l'autorisation explicite de l'auteur. 🛡️<br>
+⭐  SilverCore ©️ Tous droits reserver  ⭐
